@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B4033F1D-5F6F-44B1-9DDF-BC097EE24474}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Klavogonki</RootNamespace>
+    <AssemblyName>Klavogonki</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\IntArrayHelpers.cs" />
+    <Compile Include="Helpers\DictionaryHelpers.cs" />
+    <Compile Include="Helpers\DoubleExtension.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Models\General\AwardType.cs" />
+    <Compile Include="Models\General\StringResponse.cs" />
+    <Compile Include="Models\General\AverageType.cs" />
+    <Compile Include="Models\Common\EventArgs.cs" />
+    <Compile Include="Models\Statistics\DayStat.cs" />
+    <Compile Include="Models\Competitions\GroupInfo.cs" />
+    <Compile Include="Models\Competitions\RaceGroupResult.cs" />
+    <Compile Include="Models\HtmlParsing\RaceInfo.cs" />
+    <Compile Include="Models\HtmlParsing\RaceParsingResult.cs" />
+    <Compile Include="Models\JsonResponses\Friends.cs" />
+    <Compile Include="Models\Statistics\HiddenStat.cs" />
+    <Compile Include="Models\Competitions\LBRPlayer.cs" />
+    <Compile Include="Models\Competitions\LBRComparers.cs" />
+    <Compile Include="Models\Common\ProgressCounter.cs" />
+    <Compile Include="Models\JsonResponses\OpenStat.cs" />
+    <Compile Include="Models\JsonResponses\UserInfo.cs" />
+    <Compile Include="Models\JsonResponses\UserSummary.cs" />
+    <Compile Include="Models\Competitions\ResultParsed.cs" />
+    <Compile Include="Models\Statistics\TeamCandidate.cs" />
+    <Compile Include="Models\Statistics\TopStat.cs" />
+    <Compile Include="Services\General\ClipboardService.cs" />
+    <Compile Include="Services\EventCalculators\LittleBigRaceCalculator.cs" />
+    <Compile Include="Services\EventCalculators\ProfsoyuzScoresCalculator.cs" />
+    <Compile Include="Services.Interfaces\IHiddenStatService.cs" />
+    <Compile Include="Services.Interfaces\IDetailedStatService.cs" />
+    <Compile Include="Services.Interfaces\IExperienceService.cs" />
+    <Compile Include="Services.Interfaces\IForumService.cs" />
+    <Compile Include="Services.Interfaces\IFriendsService.cs" />
+    <Compile Include="Services.Interfaces\IKgAutenticationService.cs" />
+    <Compile Include="Services.Interfaces\IModeStatService.cs" />
+    <Compile Include="Services.Interfaces\IScoreCalculator.cs" />
+    <Compile Include="Helpers\StringBuilderHelpers.cs" />
+    <Compile Include="Models\Competitions\CrashRaceSettings.cs" />
+    <Compile Include="Models\Common\FetchResult.cs" />
+    <Compile Include="Models\Statistics\ModeStatSettings.cs" />
+    <Compile Include="Models\Competitions\PlayersComparison.cs" />
+    <Compile Include="Models\HtmlParsing\QuickStat.cs" />
+    <Compile Include="Models\Statistics\RaceResults.cs" />
+    <Compile Include="Models\HtmlParsing\Topic.cs" />
+    <Compile Include="Models\Statistics\UserInfoStat.cs" />
+    <Compile Include="Models\Statistics\UserStat.cs" />
+    <Compile Include="Models\HtmlParsing\Video.cs" />
+    <Compile Include="Services.Interfaces\IStorageProvider.cs" />
+    <Compile Include="Services\General\StorageProvider.cs" />
+    <Compile Include="Services\Statistics\DetailedStatService.cs" />
+    <Compile Include="Services.Interfaces\IQuickStatService.cs" />
+    <Compile Include="Services.Interfaces\ISuccessService.cs" />
+    <Compile Include="Services.Interfaces\ITopService.cs" />
+    <Compile Include="Services.Interfaces\IUserInfoStatService.cs" />
+    <Compile Include="Services.Interfaces\IVideoService.cs" />
+    <Compile Include="Services.Interfaces\IOpenStatService.cs" />
+    <Compile Include="Services.Interfaces\IPeriodStatService.cs" />
+    <Compile Include="Services.Interfaces\IPlayerService.cs" />
+    <Compile Include="Services.Interfaces\IRaceParser.cs" />
+    <Compile Include="Services.Interfaces\IUserInfoService.cs" />
+    <Compile Include="Services.Interfaces\IUserSummaryService.cs" />
+    <Compile Include="Services.Interfaces\IVocsService.cs" />
+    <Compile Include="Services\KgAuthenticationService.cs" />
+    <Compile Include="Services\EventCalculators\PlayersExtensions.cs" />
+    <Compile Include="Services\TeamCandidatService.cs" />
+    <Compile Include="Services\UserInfoStatService.cs" />
+    <Compile Include="Models\HtmlParsing\Success.cs" />
+    <Compile Include="Services\SuccessService.cs" />
+    <Compile Include="Services\VideoService.cs" />
+    <Compile Include="Services\EventCalculators\EventComparers.cs" />
+    <Compile Include="Constants\CarsConstants.cs" />
+    <Compile Include="Constants\EventConstants.cs" />
+    <Compile Include="Services.Interfaces\IProgressNotifier.cs" />
+    <Compile Include="Models\JsonResponses\Achievements.cs" />
+    <Compile Include="Models\General\Award.cs" />
+    <Compile Include="Models\JsonResponses\DaysStatResponse.cs" />
+    <Compile Include="Models\JsonResponses\DayRacesResponse.cs" />
+    <Compile Include="Models\Statistics\PeriodStat.cs" />
+    <Compile Include="Models\HtmlParsing\Experience.cs" />
+    <Compile Include="Models\Statistics\ModeStat.cs" />
+    <Compile Include="Models\Common\Progress.cs" />
+    <Compile Include="Models\Statistics\StatType.cs" />
+    <Compile Include="Models\HtmlParsing\Voc.cs" />
+    <Compile Include="Models\JsonResponses\WeeksStat.cs" />
+    <Compile Include="Models\General\Period.cs" />
+    <Compile Include="Services\Statistics\HiddenStatService.cs" />
+    <Compile Include="Services\FriendsService.cs" />
+    <Compile Include="Services\Statistics\OpenStatService.cs" />
+    <Compile Include="Services\ExperienceService.cs" />
+    <Compile Include="Services\UserInfoService.cs" />
+    <Compile Include="Services\UserSummaryService.cs" />
+    <Compile Include="Models\HtmlParsing\ForumPost.cs" />
+    <Compile Include="Models\Statistics\User.cs" />
+    <Compile Include="Services\Statistics\PeriodStatService.cs" />
+    <Compile Include="Services\General\NetworkClient.cs" />
+    <Compile Include="Services\PlayerService.cs" />
+    <Compile Include="Models\Statistics\Stat.cs" />
+    <Compile Include="Services\Statistics\ModeStatService.cs" />
+    <Compile Include="Services\ForumService.cs" />
+    <Compile Include="Models\General\Mode.cs" />
+    <Compile Include="Models\Competitions\Player.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Statistics\QuickStatService.cs" />
+    <Compile Include="Models\General\Rank.cs" />
+    <Compile Include="Models\Competitions\Result.cs" />
+    <Compile Include="Services\RaceParser.cs" />
+    <Compile Include="Models\HtmlParsing\Event.cs" />
+    <Compile Include="Services\VocsService.cs" />
+    <Compile Include="Services\Statistics\TopService.cs" />
+    <Compile Include="Services\EventCalculators\ScoresCalculators.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.11.7</Version>
+    </PackageReference>
+    <PackageReference Include="JSON">
+      <Version>1.0.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
