@@ -45,9 +45,9 @@ namespace Klavogonki.Hrustyashki
             for (int i = 0; i < ExercisesStat.Length; i++)
             {
                 var stat = ExercisesStat[i];
-                var rank = HrustRequitements.GetRank(i + 1, stat.Record);
+                var rank = HrustRequirements.GetRank(i + 1, stat.Record);
                 stat.Rank =  Rank.GetByIndex((int)rank);
-                var requirement = HrustRequitements.GetRequirement(i + 1, rank);
+                var requirement = HrustRequirements.GetRequirement(i + 1, rank);
                 stat.IsCheated = requirement > 0 && stat.Record > requirement * 1.2 + 100;
             }
 

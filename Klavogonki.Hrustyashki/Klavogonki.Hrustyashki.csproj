@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HrustRequitements.cs" />
+    <Compile Include="HrustRequirements.cs" />
     <Compile Include="HrustConstants.cs" />
     <Compile Include="HrustRank.cs" />
     <Compile Include="HrustStat.cs" />
