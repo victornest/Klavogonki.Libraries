@@ -1,6 +1,6 @@
 ﻿namespace Klavogonki.Hrustyashki
 {
-    internal static class HrustRequitements
+    internal static class HrustRequirements
     {
         public static int GetRequirement(int exerciseNumber, HrustRank hrustRank)
         {

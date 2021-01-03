@@ -58,7 +58,7 @@ namespace Klavogonki.Hrustyashki
             List<User> users = successService.Successes.Where(x => x.TotalMileage >= minTotalMileage).OrderByDescending(x => x.TotalMileage).Select(x => new User(x.Id, x.Nick)).ToList();
 
             var threeLastVocs = HrustConstants.ModeIds.Skip(HrustConstants.ModeIds.Length - 3).ToList();
-            var threeLastVocsRacerRequirements = Enumerable.Range(22, 3).Select(x => HrustRequitements.GetRequirement(x, HrustRank.Racer)).ToList();
+            var threeLastVocsRacerRequirements = Enumerable.Range(22, 3).Select(x => HrustRequirements.GetRequirement(x, HrustRank.Racer)).ToList();
 
             ModeStatSettings modeStatInput = new ModeStatSettings() { ModeIds = threeLastVocs, NeedPeriodStat = true };
             var tops = await topService.GetBulkTop(modeStatInput, Period.Week);
