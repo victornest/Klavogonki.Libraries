@@ -71,8 +71,13 @@ namespace Klavogonki
                     {
                         //http://klavogonki.ru/api/profile/get-stats-details-data?userId=231371&gametype=normal&fromDate=2016-01-08&toDate=2016-02-07&grouping=day
 
-                        var daysStat = await periodStatService.GetDaysStat(stat.UserId, modeStat.Mode.ModeId);
-                        var periodStat = periodStatService.GetPeriodStat(daysStat.Value, from: input.DateFrom.Value, to: input.DateTo.Value);
+                        var daysStat = await periodStatService.GetDaysStat(stat.UserId, modeStat.Mode.ModeId, input.DateFrom.Value, to: input.DateTo.Value);
+                        if (daysStat.Value == null)
+                        {
+                            continue;
+                        }
+                        var periodStat = periodStatService.
+                            GetPeriodStat(daysStat.Value, from: input.DateFrom.Value, to: input.DateTo.Value, input.NeedQuickStat ? stat.QuickStat.Record : (int?)null);
 
                         stat.PeriodStat = periodStat;
                     }

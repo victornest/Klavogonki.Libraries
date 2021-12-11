@@ -27,7 +27,7 @@ namespace Klavogonki
                 qs.Level = int.Parse(sLevel);
 
                 var mRank = doc.DocumentNode.SelectSingleNode(".//table/tr/td/div");
-                qs.Rank = Rank.GetByIndex(int.Parse(mRank.Attributes["class"].Value.Replace("rang", "")));
+                qs.Rank = Rank.GetByIndex(int.Parse(mRank.Attributes["class"].Value.Replace("rang", "").Replace("statusNormal", "").Trim()));
                 qs.Nick = doc.DocumentNode.SelectSingleNode(".//div[@class='name']").InnerText;
                 string sOverall = doc.DocumentNode.SelectSingleNode(".//table[2]/tr/td").InnerText;
                 qs.TotalMileage = int.Parse(Regex.Match(sOverall, "\\d+").Value);

@@ -68,6 +68,9 @@ namespace Klavogonki
                 else if (json == "{\"err\":\"not pro\"}")
                 {
                     result = new FetchResult<RaceResults>(isOpen: true);
+                } else if (json == "{\"err\":\"invalid gametype\"}")
+                {
+                    result = new FetchResult<RaceResults>(isOpen: true);
                 }
                 else
                 {

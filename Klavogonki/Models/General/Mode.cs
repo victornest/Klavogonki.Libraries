@@ -8,7 +8,7 @@ namespace Klavogonki
     public class Mode
     {
         public string Name { get; private set; }
-        public string ModeId { get; private set; }
+        public string ModeId { get; set; }
         public int? VocId { get; private set; }
         public bool IsVoc { get; private set; }
 

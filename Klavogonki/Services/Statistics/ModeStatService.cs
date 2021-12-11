@@ -52,7 +52,7 @@ namespace Klavogonki
 
                     if (needPeriod)
                     {
-                        var daysStat = await periodStatService.GetDaysStat(userId, modeId);
+                        var daysStat = await periodStatService.GetDaysStat(userId, modeId, input.DateFrom.Value, to: input.DateTo.Value);
                         if (daysStat.IsOpen)
                         {
                             var periodStat = periodStatService.GetPeriodStat(daysStat.Value, from: input.DateFrom.Value, to: input.DateTo.Value, maxSpeed: qs.Value.Record);

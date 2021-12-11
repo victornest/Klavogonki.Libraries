@@ -109,7 +109,7 @@ namespace Klavogonki
             if (daysStat.Any())
                 periodStat.MaxSpeed = daysStat.Max(x => x.MaxSpeed);
 
-            if (daysStat.Count >= targetResultsCount)
+            // if (daysStat.Count >= targetResultsCount)
             {
                 periodStat.RawBestResults = daysStat.Select(x => x.MaxSpeed).OrderByDescending(x => x).Take(targetResultsCount).ToArray();
             }
@@ -122,13 +122,13 @@ namespace Klavogonki
             }
             var maxSpeeds = recordStat.Select(x => x.MaxSpeed).OrderByDescending(x => x).ToList();
 
-            if (maxSpeed != null && maxSpeeds.Any() && maxSpeeds.FirstOrDefault() != maxSpeed.Value)
-            {
-                maxSpeeds.Insert(0, maxSpeed.Value);
-            }
+            // if (maxSpeed != null && maxSpeeds.Any() && maxSpeeds.FirstOrDefault() != maxSpeed.Value)
+            // {
+            //     maxSpeeds.Insert(0, maxSpeed.Value);
+            // }
 
             var array = maxSpeeds.Take(targetResultsCount).ToArray();
-            if (array.Length == targetResultsCount)
+            // if (array.Length == targetResultsCount)
             {
                 periodStat.BestResultsBelowMaxSpeed = array;
             }     
