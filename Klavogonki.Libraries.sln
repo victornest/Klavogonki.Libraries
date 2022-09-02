@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Exampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigomanUpdater", "MigomanUpdater\MigomanUpdater.csproj", "{60671C8F-A4A5-40BD-A4B1-14D143A9AABA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManager", "BookManager\BookManager.csproj", "{2C7FADC2-8399-41D2-A3BC-B26960EEC163}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,14 @@ Global
 		{60671C8F-A4A5-40BD-A4B1-14D143A9AABA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60671C8F-A4A5-40BD-A4B1-14D143A9AABA}.Release|x86.ActiveCfg = Release|Any CPU
 		{60671C8F-A4A5-40BD-A4B1-14D143A9AABA}.Release|x86.Build.0 = Release|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Debug|x86.Build.0 = Debug|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Release|x86.ActiveCfg = Release|Any CPU
+		{2C7FADC2-8399-41D2-A3BC-B26960EEC163}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

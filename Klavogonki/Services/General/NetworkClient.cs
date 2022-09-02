@@ -8,6 +8,8 @@ namespace Klavogonki
 {
     public static class NetworkClient
     {
+        // private static CookieContainer cookieContainer = new CookieContainer();
+
         private static HttpClient client;
 
         private static HttpClient Client
@@ -16,11 +18,27 @@ namespace Klavogonki
             {
                 if (client == null)
                 {
-                    client = new HttpClient();
+                    var handler = new HttpClientHandler() {UseCookies = false};
+                    client = new HttpClient(handler);
                 }
                 return client;
             }
         }
+
+        public static async Task<string> PostFormAsync(string url, FormUrlEncodedContent formContent)
+        {
+            var message = new HttpRequestMessage(HttpMethod.Post, url);
+            message.Content = formContent;
+            message.Headers.Add("Cookie", "user=vnest%3B36484aa0bf43a4a3d80734a5b382dbf2;");
+            
+            var response = await Client.SendAsync(message);
+            
+            // cookieContainer.Add(new Cookie("user", "vnest%3B36484aa0bf43a4a3d80734a5b382dbf2"));
+            // var response = await Client.PostAsync(url, formContent);
+            
+            return await response.Content.ReadAsStringAsync();
+        }
+
 
         public static async Task<string> DownloadstringAsync(string url)
         {
